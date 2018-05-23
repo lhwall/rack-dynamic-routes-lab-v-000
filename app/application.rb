@@ -5,6 +5,7 @@ class Application
 
     if req.path == "/items/#{@name}"
       resp.write @price
+      binding.pry
     else
       resp.write "Route not found"
       resp.status = 404
