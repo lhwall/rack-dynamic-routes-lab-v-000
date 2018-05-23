@@ -3,9 +3,8 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    if req.path.scan(\items\)
+    if req.path.scan(/items/)
       resp.write @price
-
     else
       resp.write "Route not found"
       resp.status = 404
